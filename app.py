@@ -70,13 +70,13 @@ if uploaded_train_file is not None:
         bar = st.progress(0)
         latest_iteration = st.empty()
         for i, (model_name, model) in enumerate(models.items()):
-            latest_iteration.text(f"{i+1}/{len(models)} : {model_name}")
-            bar.progress(int(100/len(models) * (i+1)))
             result = cross_validate(model, X, y, cv=cv, scoring=list(metrics.keys()))
             scores = []
             for k in metrics:
                 scores.append(result["test_" + k].mean())
             table.append(scores)
+            latest_iteration.text(f"{i+1}/{len(models)} : {model_name}")
+            bar.progress(int(100/len(models) * (i+1)))
 
         latest_iteration.text("")
         st.write("### 学習結果")
