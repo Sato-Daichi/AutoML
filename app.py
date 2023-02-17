@@ -34,7 +34,7 @@ if uploaded_train_file is not None:
                 "SVM": SVR(),
                 "RandomForest": RandomForestRegressor(),
                 "AdaBoost": AdaBoostRegressor(),
-                "LightGBM": lgb.LGBMRegressor(),
+                # "LightGBM": lgb.LGBMRegressor(),
             }
             metrics = {
                 "r2": "R^2",
@@ -49,7 +49,7 @@ if uploaded_train_file is not None:
                 "SVM": SVC(),
                 "RandomForest": RandomForestClassifier(),
                 "AdaBoost": AdaBoostClassifier(),
-                "LightGBM": lgb.LGBMClassifier(),
+                # "LightGBM": lgb.LGBMClassifier(),
             }
             metrics = {
                 "accuracy": "Accuracy",
