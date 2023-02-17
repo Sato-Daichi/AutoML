@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from sklearn.linear_model import LinearRegression, LogisticRegression, Ridge, Lasso
 from sklearn.neighbors import KNeighborsRegressor, KNeighborsClassifier
 from sklearn.svm import SVR, SVC
