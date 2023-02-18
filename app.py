@@ -3,7 +3,7 @@ from sklearn.linear_model import LinearRegression, LogisticRegression, Ridge, La
 from sklearn.neighbors import KNeighborsRegressor, KNeighborsClassifier
 from sklearn.svm import SVR, SVC
 from sklearn.ensemble import AdaBoostRegressor, AdaBoostClassifier, RandomForestRegressor, RandomForestClassifier
-from sklearn.model_selection import cross_validate
+from sklearn.model_selection import cross_validate, KFold, StratifiedKFold
 import lightgbm as lgb
 import streamlit as st
 
@@ -69,8 +69,9 @@ if uploaded_train_file is not None:
         table = []
         bar = st.progress(0)
         latest_iteration = st.empty()
+        kf = KFold(cv, shuffle=True) if task == "回帰" else StratifiedKFold(cv, shuffle=True)
         for i, (model_name, model) in enumerate(models.items()):
-            result = cross_validate(model, X, y, cv=cv, scoring=list(metrics.keys()))
+            result = cross_validate(model, X, y, cv=kf, scoring=list(metrics.keys()))
             scores = []
             for k in metrics:
                 scores.append(result["test_" + k].mean())
