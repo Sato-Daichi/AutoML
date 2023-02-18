@@ -2,6 +2,8 @@
 
 StreamlitでAutoMLツールを作成
 
+https://sato-daichi-automl-app-3szvpn.streamlit.app/
+
 ## 使い方
 
 1. 学習データをアップロード
