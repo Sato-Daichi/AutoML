@@ -1,8 +1,8 @@
 # AutoML
 
-StreamlitでAutoMLツールを作成
+StreamlitでAutoMLツールを作成した
 
-https://sato-daichi-automl-app-3szvpn.streamlit.app/
+サイト：https://sato-daichi-automl-app-3szvpn.streamlit.app/
 
 ## 使い方
 
