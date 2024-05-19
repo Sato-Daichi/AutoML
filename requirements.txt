@@ -1,5 +1,5 @@
 streamlit==1.16.0
-scikit-learn==0.23 --no-build-isolation
+scikit-learn==0.23
 pandas==1.4.4
 lightgbm==3.3.3
 Cython==0.29.36
