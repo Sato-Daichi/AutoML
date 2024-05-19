@@ -2,9 +2,10 @@
 
 StreamlitでAutoMLツールを作成した
 
-サイト：https://sato-daichi-automl-app-3szvpn.streamlit.app/
+サイト：https://automl-for-tabular-data.streamlit.app/
 
-![SS 45](https://user-images.githubusercontent.com/88601890/219824500-4367a98f-39a7-4374-a83b-2366e28c6469.jpg)
+2024/05/19現在, streamlit cloudやdockerなどのupdateにより、dependency errorが発生している
+
 
 ## 使い方
 
